@@ -1,4 +1,4 @@
-{% set version = '0.0.13' %}
+{% set version = "0.0.14" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/overviewR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/overviewR/overviewR_{{ version }}.tar.gz
-  sha256: 09e559e552eae051523ea4c0d0134b2d8e3420ea5d68b854753608929ac4e28d
+  sha256: d1c4733bee2a964fc151b0241869fd6aad039f82433516029837639de5e84dab
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -55,10 +55,7 @@ test:
 about:
   home: https://github.com/cosimameyer/overviewR
   license: GPL-3.0-only
-  summary: Makes it easy to display descriptive information on a data set.  Getting an easy overview
-    of a data set by displaying and visualizing sample information in different tables
-    (e.g., time and scope conditions).  The package also provides publishable 'LaTeX'
-    code to present the sample information.
+  summary: Makes it easy to display descriptive information on a data set.  Getting an easy overview of a data set by displaying and visualizing sample information in different tables (e.g., time and scope conditions).  The package also provides publishable 'LaTeX' code to present the sample information.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
